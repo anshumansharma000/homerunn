@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:homerunn/features/home/widgets/banner_carausel.dart';
 import 'package:homerunn/features/home/widgets/circular_widget.dart';
 import 'package:homerunn/features/home/widgets/kitchen_card.dart';
+import 'package:homerunn/features/home/widgets/search_engine.dart';
 
 class Home_Screen extends StatelessWidget {
   static const routeName = "/homeScreen";
@@ -68,6 +70,12 @@ class Home_Screen extends StatelessWidget {
                       ),
                     ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                    child: SearchEngine(),
+                  ),
+                  FoodBannerCarousel(),
+
                   SizedBox(
                     height: 20,
                   ),

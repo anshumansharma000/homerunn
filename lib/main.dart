@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:homerunn/features/home/screens/app_home_screen.dart';
 import 'package:homerunn/features/home/screens/home_screen.dart';
 import 'router.dart';
 
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       onGenerateRoute: (settings) => generateRoute(settings),
-      home: Home_Screen(),
+      home: AppHomeScreen(),
+      // home: Home_Screen(),
     );
   }
 }
