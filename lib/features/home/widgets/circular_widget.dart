@@ -10,11 +10,11 @@ class CircularWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Center(child: Text(text, style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),)),
-      width: 120,
-      height: 120,
+      width: 100,
+      height: 100,
       margin: EdgeInsets.symmetric(horizontal: 10),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(60),
+        shape: BoxShape.circle,
         image: DecorationImage(
         image: AssetImage(image),
         opacity: 0.9,

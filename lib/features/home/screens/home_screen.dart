@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:homerunn/features/home/widgets/circular_widget.dart';
+import 'package:homerunn/features/home/widgets/kitchen_card.dart';
 
 class Home_Screen extends StatelessWidget {
   static const routeName = "/homeScreen";
+
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+    final height = MediaQuery.of(context).size.height;
+    final fontSize = (width) * 0.045;
     return Scaffold(
       body: Stack(
         children: [
@@ -104,40 +109,13 @@ class Home_Screen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Popular Restaurants",
+                          "Home Kitchens",
                         ),
                         TextButton(onPressed: () {}, child: Text("View all"))
                       ],
                     ),
                   ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  SizedBox(
-                    height: 50,
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Container(
-                    height: 250,
-                    width: double.infinity,
-                    padding: const EdgeInsets.only(left: 20),
-                    child: SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: [
-
-                          SizedBox(
-                            width: 30,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
+                  KitchenCard(fontSize: fontSize),
                 ],
               ),
             ),
@@ -147,5 +125,6 @@ class Home_Screen extends StatelessWidget {
     );
   }
 }
+
 
 
