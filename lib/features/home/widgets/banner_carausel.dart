@@ -25,10 +25,12 @@ class FoodBannerCarousel extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-            width: 320.0,
+            width: 320,
           );
         },
       ),
     );
   }
 }
+
+
