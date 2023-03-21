@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:homerunn/features/home/widgets/banner_carausel.dart';
-import 'package:homerunn/features/home/widgets/category_tiles.dart';
+import 'package:homerunn/features/food_delivery/widgets/banner_carausel.dart';
+import 'package:homerunn/features/food_delivery/widgets/category_tiles.dart';
 import 'package:homerunn/features/home/widgets/search_engine.dart';
 class AppHomeScreen extends StatelessWidget {
   const AppHomeScreen({Key? key}) : super(key: key);
@@ -34,7 +34,7 @@ class AppHomeScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
             child: SearchEngine(),
           ),
-          CategoryTile(),
+          CategoryTiles(),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 8),
             child: FoodBannerCarousel(),

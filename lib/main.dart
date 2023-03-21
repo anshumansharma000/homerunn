@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:homerunn/common/providers/loading_provider.dart';
 import 'package:homerunn/features/home/screens/app_home_screen.dart';
-import 'package:homerunn/features/home/screens/home_screen.dart';
+import 'package:homerunn/features/food_delivery/screens/food_home_screen.dart';
 import 'router.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (_)=>LoadingProvider())
+    ],
+      child: const MyApp()
+  ));
 }
 
 class MyApp extends StatelessWidget {

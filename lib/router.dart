@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:homerunn/features/home/screens/home_screen.dart';
+import 'package:homerunn/features/food_delivery/screens/food_home_screen.dart';
 
 
 Route<dynamic> generateRoute(RouteSettings routeSettings) {
   switch (routeSettings.name) {
-    case Home_Screen.routeName:
+    case FoodHomeScreen.routeName:
       return MaterialPageRoute(
-          settings: routeSettings, builder: (_) =>  Home_Screen());
+          settings: routeSettings, builder: (_) =>  FoodHomeScreen());
     default:
       return MaterialPageRoute(
         settings: routeSettings,

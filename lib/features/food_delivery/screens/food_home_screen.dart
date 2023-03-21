@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:homerunn/features/home/widgets/banner_carausel.dart';
-import 'package:homerunn/features/home/widgets/circular_widget.dart';
-import 'package:homerunn/features/home/widgets/kitchen_card.dart';
+import 'package:homerunn/features/food_delivery/widgets/banner_carausel.dart';
+import 'package:homerunn/features/food_delivery/widgets/circular_widget.dart';
+import 'package:homerunn/features/food_delivery/widgets/kitchen_card.dart';
 import 'package:homerunn/features/home/widgets/search_engine.dart';
 
-class Home_Screen extends StatelessWidget {
+import '../widgets/kitchens.dart';
+
+class FoodHomeScreen extends StatelessWidget {
   static const routeName = "/homeScreen";
 
   @override
@@ -123,7 +125,7 @@ class Home_Screen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  KitchenCard(fontSize: fontSize),
+                  Kitchens(fontSize: fontSize),
                 ],
               ),
             ),

@@ -4,9 +4,20 @@ class KitchenCard extends StatelessWidget {
   const KitchenCard({
     super.key,
     required this.fontSize,
+    required this.kitchenName,
+    required this.displayPhoto,
+    required this.homeChefFirstName,
+    required this.homeChefLastName, required this.description, required this.costForOne
   });
 
   final double fontSize;
+  final String kitchenName;
+  final String displayPhoto;
+  final String homeChefFirstName;
+  final String homeChefLastName;
+  final String description;
+  final int costForOne;
+
 
   @override
   Widget build(BuildContext context) {
@@ -27,13 +38,13 @@ class KitchenCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(height: 8),
-                  Text('Well Plated By Anamika', style: TextStyle(fontWeight: FontWeight.w500, fontSize: fontSize),),
+                  Text(kitchenName, style: TextStyle(fontWeight: FontWeight.w500, fontSize: fontSize),),
                   SizedBox(height:6),
-                  Text('Chef - Anamika Verma', style: TextStyle(color: Colors.grey, fontSize:14),),
+                  Text('Chef - $homeChefFirstName $homeChefLastName', style: TextStyle(color: Colors.grey, fontSize:14),),
                   SizedBox(height:6),
-                  Text('Anamika is a chef from Bihar. She is very good.',style:TextStyle(color: Colors.grey, fontSize:14),),
+                  Text(description,style:TextStyle(color: Colors.grey, fontSize:14),),
                   SizedBox(height:6),
-                  Text('Cost for one: 120',),
+                  Text('Cost for one: ${costForOne}',),
                   SizedBox(height:6),
                   Row(
                     children: [
@@ -65,7 +76,7 @@ class KitchenCard extends StatelessWidget {
                   width: 100,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16),
-                    image: DecorationImage(image: AssetImage('assets/images/southindian.jpeg'), fit: BoxFit.cover,
+                    image: DecorationImage(image: NetworkImage(displayPhoto), fit: BoxFit.cover,
                     ),),
                 ),
                 SizedBox(height: 6),
@@ -86,3 +97,5 @@ class KitchenCard extends StatelessWidget {
     );
   }
 }
+
+
