@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:homerunn/features/food_delivery/screens/kitchen_screen.dart';
 import 'package:homerunn/features/food_delivery/widgets/kitchen_card.dart';
 import 'package:provider/provider.dart';
 
@@ -40,7 +41,7 @@ class _KitchensState extends State<Kitchens> {
     return ListView.builder(itemCount: kitchens?.length,primary: false, shrinkWrap: true, itemBuilder: (BuildContext context, index){
       return Column(
         children: [
-          KitchenCard(fontSize: widget.fontSize, kitchenName: kitchens[index].kitchenName, displayPhoto: kitchens[index].displayPhoto, homeChefFirstName: kitchens[index].homeChef.firstName, homeChefLastName: kitchens[index].homeChef.lastName, description: kitchens[index].description, costForOne: kitchens[index].costForOne),
+          GestureDetector(onTap:(){Navigator.pushNamed(context, RestaurantScreen.routeName);},child: KitchenCard(fontSize: widget.fontSize, kitchenName: kitchens[index].kitchenName, displayPhoto: kitchens[index].displayPhoto, homeChefFirstName: kitchens[index].homeChef.firstName, homeChefLastName: kitchens[index].homeChef.lastName, description: kitchens[index].description, costForOne: kitchens[index].costForOne)),
           SizedBox(height: 16),
         ],
       );
